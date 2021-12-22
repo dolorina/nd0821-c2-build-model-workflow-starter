@@ -1,3 +1,9 @@
+"""
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
+This script defines the entry points in the data check step. A conda environment is build with conda.yml 
+"""
 name: data_check
 conda_env: conda.yml
 

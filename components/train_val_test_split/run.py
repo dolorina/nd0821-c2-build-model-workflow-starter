@@ -1,5 +1,7 @@
-#!/usr/bin/env python
 """
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
 This script splits the provided dataframe in test and remainder
 """
 import argparse
@@ -15,7 +17,9 @@ logger = logging.getLogger()
 
 
 def go(args):
-
+    '''
+    In this function the dataframe is splitted into test and train/val set
+    '''
     run = wandb.init(job_type="train_val_test_split")
     run.config.update(args)
 

@@ -1,5 +1,7 @@
-#!/usr/bin/env python
 """
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
 This script download a URL to a local destination
 """
 import argparse
@@ -15,7 +17,9 @@ logger = logging.getLogger()
 
 
 def go(args):
-
+    '''
+    This function downloads a URL to a local destination
+    '''
     run = wandb.init(job_type="download_file")
     run.config.update(args)
 

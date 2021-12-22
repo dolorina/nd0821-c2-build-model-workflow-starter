@@ -1,5 +1,7 @@
-#!/usr/bin/env python
 """
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
 This step takes the best model, tagged with the "prod" tag, and tests it against the test dataset
 """
 import argparse
@@ -17,7 +19,9 @@ logger = logging.getLogger()
 
 
 def go(args):
-
+    '''
+    This function takes the best performing model which is tagged with "prod" and tests it against the test dataset
+    '''
     run = wandb.init(job_type="test_model")
     run.config.update(args)
 

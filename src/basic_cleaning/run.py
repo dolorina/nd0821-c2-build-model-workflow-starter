@@ -1,6 +1,8 @@
-#!/usr/bin/env python
 """
-Download from W&B the raw dataset and apply some basic data cleaning, exporting the result to a new artifact
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
+This script downloads the raw dataset from W&B, applies some basic data cleaning and exports the result to a new artifact
 """
 import argparse
 import logging
@@ -14,18 +16,15 @@ logger = logging.getLogger()
 
 
 def go(args):
+    '''
+    In this function the raw dataset is downloaded from W&B, 
+    a basic data cleaning is done and the results are exported to a new artifact
+    '''
 
     run = wandb.init(job_type="basic_cleaning")
     run.config.update(args)
 
-    # Download input artifact. This will also log that this script is using this
-    # particular version of the artifact
-    # artifact_local_path = run.use_artifact(args.input_artifact).file()
-
-    ######################
-    # YOUR CODE HERE     #
-    ######################
-
+    # Download input artifact. This will also log that this script is using this particular version of the artifact
     logger.info("Download artifact")
     artifact_local_path = run.use_artifact(args.input_artifact).file()
     df = pd.read_csv(artifact_local_path) 
@@ -39,6 +38,7 @@ def go(args):
     # Convert last_review to datetime
     df['last_review'] = pd.to_datetime(df['last_review'])
 
+    # drop rows in the dataset that are not in the proper geolocation
     idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
     df = df[idx].copy()
 
@@ -66,43 +66,43 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--input_artifact", 
-        type= str, ## INSERT TYPE HERE: str, float or int,
-        help= "Name of input artifact", ## INSERT DESCRIPTION HERE,
+        type= str, 
+        help= "Name of input artifact", 
         required=True
     )
 
     parser.add_argument(
         "--output_artifact", 
-        type= str, ## INSERT TYPE HERE: str, float or int,
-        help= "Name of output artifact", ## INSERT DESCRIPTION HERE,
+        type= str,
+        help= "Name of output artifact", 
         required=True
     )
 
     parser.add_argument(
         "--output_type", 
-        type= str, ## INSERT TYPE HERE: str, float or int,
-        help= "Type of the output artifact", ## INSERT DESCRIPTION HERE,
+        type= str, 
+        help= "Type of the output artifact",
         required=True
     )
 
     parser.add_argument(
         "--output_description", 
-        type= str, ## INSERT TYPE HERE: str, float or int,
-        help= "Description of the output artifact", ## INSERT DESCRIPTION HERE,
+        type= str, 
+        help= "Description of the output artifact", 
         required=True
     )
 
     parser.add_argument(
         "--min_price", 
-        type= int, ## INSERT TYPE HERE: str, float or int,
-        help= "Minimal rental price", ## INSERT DESCRIPTION HERE,
+        type= float, 
+        help= "Minimal rental price", 
         required=True
     )
 
     parser.add_argument(
         "--max_price", 
-        type= int, ## INSERT TYPE HERE: str, float or int,
-        help= "Maximal rental price", ## INSERT DESCRIPTION HERE,
+        type= float, 
+        help= "Maximal rental price", 
         required=True
     )
 

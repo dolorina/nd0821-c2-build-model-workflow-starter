@@ -1,3 +1,9 @@
+"""
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
+This script contains function that define a statistical confidential test  
+"""
 import pytest
 import pandas as pd
 import wandb

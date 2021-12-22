@@ -1,3 +1,9 @@
+"""
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
+This script defines the entry points in the train model step. A conda environment is build with conda.yml 
+"""
 name: download_file
 conda_env: conda.yml
 

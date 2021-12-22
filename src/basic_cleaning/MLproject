@@ -1,3 +1,9 @@
+"""
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
+This script defines the entry points in the basic cleaning step. A conda environment is build with conda.yml 
+"""
 name: basic_cleaning
 conda_env: conda.yml
 
@@ -6,19 +12,19 @@ entry_points:
     parameters:
 
       input_artifact:
-        description: Name of the input artifact ## ADD DESCRIPTION
+        description: Name of the input artifact 
         type: string
 
       output_artifact:
-        description: Name of the output artifact ## ADD DESCRIPTION
+        description: Name of the output artifact 
         type: string
 
       output_type:
-        description: Type of the output artifact ## ADD DESCRIPTION
+        description: Type of the output artifact 
         type: string
 
       output_description:
-        description: Description of the output artifact ## ADD DESCRIPTION
+        description: Description of the output artifact 
         type: string
 
       min_price: 

@@ -1,3 +1,9 @@
+"""
+Author: Marina Dolokov, Udacity
+Date: December 2021
+
+This script defines functions that test whether the splitted datasets are fine 
+"""
 import pandas as pd
 import numpy as np
 import scipy.stats
