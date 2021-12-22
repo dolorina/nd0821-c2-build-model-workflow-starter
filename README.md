@@ -1,4 +1,4 @@
-# Build an ML Pipeline for Short-Term Rental Prices in NYC
+# Build a ML Pipeline for Short-Term Rental Prices in NYC
 
 * Link to the github repository: https://github.com/dolorina/nd0821-c2-build-model-workflow-starter
 
@@ -10,6 +10,18 @@ time on various rental platforms receices new data in bulk every week. A model t
 to be retrained with the same cadence, necessitating an end-to-end pipeline that can be reused.
 
 In this project such a pipeline is build.
+
+
+## Table of contents
+
+- [Introduction](Build-a-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
+- [Preliminary steps](#preliminary-steps)
+  * [Create environment](#create-environment)
+  * [Get API key for Weights and Biases](#get-api-key-for-weights-and-biases)
+  * [Cookie cutter](#cookie-cutter)
+  * [The configuration](#the-configuration)
+  * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
+  * [Pre-existing components](#pre-existing-components)
 
 ## Preliminary steps
 ### Create environment
@@ -167,31 +179,6 @@ activate it explicitly on the command line:
 ```bash
 > mlflow run . -P steps=test_regression_model
 ```
-
-## Table of contents
-
-- [Introduction](#build-an-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
-- [Preliminary steps](#preliminary-steps)
-  * [Fork the Starter Kit](#fork-the-starter-kit)
-  * [Create environment](#create-environment)
-  * [Get API key for Weights and Biases](#get-api-key-for-weights-and-biases)
-  * [Cookie cutter](#cookie-cutter)
-  * [The configuration](#the-configuration)
-  * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
-  * [Pre-existing components](#pre-existing-components)
-- [Instructions](#instructions)
-  * [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-  * [Data cleaning](#data-cleaning)
-  * [Data testing](#data-testing)
-  * [Data splitting](#data-splitting)
-  * [Train Random Forest](#train-random-forest)
-  * [Optimize hyperparameters](#optimize-hyperparameters)
-  * [Select the best model](#select-the-best-model)
-  * [Test](#test)
-  * [Visualize the pipeline](#visualize-the-pipeline)
-  * [Release the pipeline](#release-the-pipeline)
-  * [Train the model on a new data sample](#train-the-model-on-a-new-data-sample)
-- [Cleaning up](#cleaning-up)
 
 
 ## License
