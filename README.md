@@ -11,31 +11,6 @@ to be retrained with the same cadence, necessitating an end-to-end pipeline that
 
 In this project such a pipeline is build.
 
-## Table of contents
-
-- [Introduction](#build-an-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
-- [Preliminary steps](#preliminary-steps)
-  * [Fork the Starter Kit](#fork-the-starter-kit)
-  * [Create environment](#create-environment)
-  * [Get API key for Weights and Biases](#get-api-key-for-weights-and-biases)
-  * [Cookie cutter](#cookie-cutter)
-  * [The configuration](#the-configuration)
-  * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
-  * [Pre-existing components](#pre-existing-components)
-- [Instructions](#instructions)
-  * [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-  * [Data cleaning](#data-cleaning)
-  * [Data testing](#data-testing)
-  * [Data splitting](#data-splitting)
-  * [Train Random Forest](#train-random-forest)
-  * [Optimize hyperparameters](#optimize-hyperparameters)
-  * [Select the best model](#select-the-best-model)
-  * [Test](#test)
-  * [Visualize the pipeline](#visualize-the-pipeline)
-  * [Release the pipeline](#release-the-pipeline)
-  * [Train the model on a new data sample](#train-the-model-on-a-new-data-sample)
-- [Cleaning up](#cleaning-up)
-
 ## Preliminary steps
 ### Create environment
 Make sure to have conda installed and ready, then create a new environment using the ``environment.yml``
@@ -192,6 +167,33 @@ activate it explicitly on the command line:
 ```bash
 > mlflow run . -P steps=test_regression_model
 ```
+
+## Table of contents
+
+- [Introduction](#build-an-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
+- [Preliminary steps](#preliminary-steps)
+  * [Fork the Starter Kit](#fork-the-starter-kit)
+  * [Create environment](#create-environment)
+  * [Get API key for Weights and Biases](#get-api-key-for-weights-and-biases)
+  * [Cookie cutter](#cookie-cutter)
+  * [The configuration](#the-configuration)
+  * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
+  * [Pre-existing components](#pre-existing-components)
+- [Instructions](#instructions)
+  * [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+  * [Data cleaning](#data-cleaning)
+  * [Data testing](#data-testing)
+  * [Data splitting](#data-splitting)
+  * [Train Random Forest](#train-random-forest)
+  * [Optimize hyperparameters](#optimize-hyperparameters)
+  * [Select the best model](#select-the-best-model)
+  * [Test](#test)
+  * [Visualize the pipeline](#visualize-the-pipeline)
+  * [Release the pipeline](#release-the-pipeline)
+  * [Train the model on a new data sample](#train-the-model-on-a-new-data-sample)
+- [Cleaning up](#cleaning-up)
+
+
 ## License
 
 [License](LICENSE.txt)
