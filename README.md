@@ -22,18 +22,6 @@ In this project such a pipeline is build.
   * [The configuration](#the-configuration)
   * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
   * [Pre-existing components](#pre-existing-components)
-- [Instructions](#instructions)
-  * [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-  * [Data cleaning](#data-cleaning)
-  * [Data testing](#data-testing)
-  * [Data splitting](#data-splitting)
-  * [Train Random Forest](#train-random-forest)
-  * [Optimize hyperparameters](#optimize-hyperparameters)
-  * [Select the best model](#select-the-best-model)
-  * [Test](#test)
-  * [Visualize the pipeline](#visualize-the-pipeline)
-  * [Release the pipeline](#release-the-pipeline)
-  * [Train the model on a new data sample](#train-the-model-on-a-new-data-sample)
 - [Trouble Shooting](#in-case-of-errors)
 
 ## Preliminary steps
