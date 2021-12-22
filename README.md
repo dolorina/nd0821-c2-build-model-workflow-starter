@@ -23,7 +23,7 @@ In this project such a pipeline is build.
   * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
   * [Pre-existing components](#pre-existing-components)
 - [Trouble Shooting](#in-case-of-errors)
-- [license](#license)
+- [License](#license)
 
 ## Preliminary steps
 ### Create environment
